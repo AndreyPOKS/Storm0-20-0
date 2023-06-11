@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class RandomSpawn : MonoBehaviour
 {
+    [Header("Элементы массива")]
     public GameObject[] objects;
     public List<Transform> spawnPoints;
-    private float Timer = 1;
+    [Header("Настройка случайного спавна")]
+    public float Timer;
     private float TimerForUnity = 0;
+    private float RandNumber;
 
     void Start()
     {
@@ -17,8 +21,9 @@ public class RandomSpawn : MonoBehaviour
 
     void Update(){
         if (TimerForUnity <= 0){
+            RandNumber = Random.Range(5.0f, Timer);
             Spawn();
-            TimerForUnity = Timer;
+            TimerForUnity = RandNumber;
         }
         else{
             TimerForUnity -=Time.deltaTime;
