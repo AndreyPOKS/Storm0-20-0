@@ -8,6 +8,7 @@ public class player : MonoBehaviour
     public float speed;
     public Rigidbody2D rb;
     private Vector2 move;
+    public FixedJoystick joystick;
     [Header("Player Attack Settings")]
     public Transform attack_Point;
     public int damage;
@@ -24,55 +25,46 @@ public class player : MonoBehaviour
 
     public void Update()
     {
-        move.x = Input.GetAxisRaw("Horizontal");
-        move.y = Input.GetAxisRaw("Vertical");
-
+        // move.x = Input.GetAxisRaw("Horizontal");
+        // move.y = Input.GetAxisRaw("Vertical");
+        move.x = joystick.Horizontal;
+        move.y = joystick.Vertical;
         animator.SetFloat("HorizintalMove",move.x);
         animator.SetFloat("VerticalMove",move.y);
         rb.MovePosition(rb.position + move * speed * Time.fixedDeltaTime);
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Attack(1);
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    Attack(1);
+        //}
 
 
-        if (AttackCollDawnForUnity <= 0){
-            
-            if(Input.GetKeyDown(KeyCode.Space))
-            {   
+        // if (AttackCollDawnForUnity <= 0){
 
-                AttackCollDawnForUnity = AttackCollDawn;
-                animator.SetTrigger("Attack");
-
-            }
-        }
-        else{
-            AttackCollDawnForUnity -= Time.deltaTime;
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //
+        // AttackCollDawnForUnity = AttackCollDawn;
+        //       animator.SetTrigger("Attack");
+        //
+        // 
+        //else{
+        //AttackCollDawnForUnity -= Time.deltaTime;
+        //}
     }
-    public void Attack(int num)
+    public void Attack()
     {
 
-        if (num == 1)
-        {
-            Collider2D[] hitChest = Physics2D.OverlapCircleAll(attack_Point.position, attack_range, ChestLayers);
-            foreach (Collider2D Chest in hitChest)
-            {
-
-                Chest.GetComponent<Chest>().TakeDamage(damage);
-            } 
-        }
-        else
-        {
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attack_Point.position, attack_range, enemyLayers);
+        AttackCollDawnForUnity = AttackCollDawn;
+        animator.SetTrigger("Attack");
+        AttackCollDawnForUnity -= Time.deltaTime;
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attack_Point.position, attack_range, enemyLayers);
             foreach (Collider2D enemy in hitEnemies)
             {
                 Debug.Log(enemy);
                 enemy.GetComponent<Enemy>().TakeDamage(damage);
             }
 
-        }
     }
    
     void OnDrawGizmosSelected(){
