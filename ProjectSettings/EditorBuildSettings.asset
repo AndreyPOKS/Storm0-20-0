@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Menu.unity
     guid: ec337824d47eef5418adf2ba3d518e19
   - enabled: 1
-    path: Assets/1lvl.unity
+    path: Assets/TextMesh Pro/1lvl.unity
     guid: 07048553846427b42af354b886825121
   m_configObjects: {}
