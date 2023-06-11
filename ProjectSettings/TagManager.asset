@@ -7,8 +7,6 @@ TagManager:
   - Enemy
   - Lut
   - Chest
-  - Killer
-  - Oblako
   layers:
   - Default
   - TransparentFX
@@ -21,8 +19,8 @@ TagManager:
   - Waepon
   - Heal
   - Chest
-  - Killer
-  - Oblako
+  - 
+  - 
   - 
   - 
   - 
