@@ -13,8 +13,6 @@ public class Fire : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
-
     }
 
     // Update is called once per frame
@@ -29,7 +27,6 @@ public class Fire : MonoBehaviour
         }
     }
     void OnTriggerEnter2D(Collider2D HitInfo){
-        Debug.Log(HitInfo.name);
         Health health = HitInfo.gameObject.GetComponent<Health>();
         health.TakeHit(damage);
         Destroy(gameObject);
