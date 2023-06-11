@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 956066245827859868}
   - component: {fileID: 1476399744642646698}
   - component: {fileID: 9043945899263854009}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: FireObject
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,6 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  damage: 20
+  damage: 0
   timer: 2
   rb: {fileID: 956066245827859868}
