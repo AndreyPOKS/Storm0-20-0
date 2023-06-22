@@ -9,6 +9,8 @@ TagManager:
   - Chest
   - Killer
   - Oblako
+  - EnemyRange
+  - EnemyMelee
   layers:
   - Default
   - TransparentFX

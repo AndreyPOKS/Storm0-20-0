@@ -31,7 +31,7 @@ public class RandomSpawn : MonoBehaviour
     }
     void Spawn()
     {
-
+        TimerForUnity = RandNumber;
         for ( int i = 0; i < objects.Length; i++)
         {
             var spawn = Random.Range(0, spawnPoints.Count);

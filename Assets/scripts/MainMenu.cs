@@ -9,6 +9,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("1lvl");// в кавычках название сцены на которую осуществляется переход
     }
+    public void LoadStart()
+    {
+        SceneManager.LoadScene("Faq");
+    }
     
     public void ExitGame()
     {

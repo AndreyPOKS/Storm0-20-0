@@ -7,17 +7,14 @@ public class Chest : MonoBehaviour
     public int MaxHp;
     public int Hp;
     public Transform item;
-    private Material MathBlink;
-    private Material MathDefault;
-    private SpriteRenderer spriteRend;
+    public Transform Keys;
+    private float randomNumber;
+
 
     void Start()
     {
+        randomNumber = Random.Range(0, 2);
         Hp = MaxHp;
-        spriteRend = GetComponent<SpriteRenderer>();
-        MathBlink = Resources.Load("EnemyBlink", typeof(Material)) as Material;
-        MathDefault = spriteRend.material;
-
     }
     void Update()
     {
@@ -26,26 +23,29 @@ public class Chest : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        Debug.Log("SDkaj");
         Hp -= damage;
-        spriteRend.material = MathBlink;
+
 
         if (Hp <= 0)
         {
             Die();
         }
-        else
-        {
-            Invoke("ResetMaterial", .2f);
-        }
+
     }
     void Die()
     {
-        Destroy(gameObject);
-        Instantiate(item, transform.position, transform.rotation);
+        if (randomNumber >= 1)
+        {
+            Instantiate(Keys, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instantiate(item, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+        
+        
     }
-    void ResetMaterial()
-    {
-        spriteRend.material = MathDefault;
-    }
+
 }

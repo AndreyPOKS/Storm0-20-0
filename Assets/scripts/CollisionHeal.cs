@@ -10,7 +10,7 @@ public class CollisionHeal : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D coll)
     {
         //Если тег объекта коллайдер которого столкнулся с коллайдером нашего объекта - Player
-        if (coll.gameObject.tag == collisionTag)
+        if (coll.gameObject.tag == "Player")
         {
             Debug.Log("collisionTag");
             //Берём у этого объекта компонент Health (Скрипт который на нём висит)

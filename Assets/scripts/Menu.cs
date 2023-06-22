@@ -23,6 +23,17 @@ public class Menu : MonoBehaviour
             }
         }
     }
+    public void MobPause()
+    {
+        if (GameIsPaused)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
+        }
+    }
     public void Resume()
     {
         pauseMenuUI.SetActive(false);

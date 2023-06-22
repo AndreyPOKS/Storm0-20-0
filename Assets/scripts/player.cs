@@ -44,6 +44,7 @@ public class player : MonoBehaviour
 
                 AttackCollDawnForUnity = AttackCollDawn;
                 animator.SetTrigger("Attack");
+                Debug.Log("Àíäðþõà");
 
             }
         }
@@ -53,6 +54,7 @@ public class player : MonoBehaviour
     }
     public void Attack(int num)
     {
+<<<<<<< Updated upstream
 
         if (num == 1)
         {
@@ -65,14 +67,43 @@ public class player : MonoBehaviour
         }
         else
         {
+=======
+        if (AttackCollDawnForUnity <= 0)
+        {
+            AttackCollDawnForUnity = AttackCollDawn;
+            animator.SetTrigger("Attack");
+            AttackCollDawnForUnity -= Time.deltaTime;
+>>>>>>> Stashed changes
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attack_Point.position, attack_range, enemyLayers);
             foreach (Collider2D enemy in hitEnemies)
             {
+                if (enemy.tag == "EnemyRange")
+                {
+                    enemy.GetComponent<AIRange>().TakeDamage(damage);
+                }
+                else if (enemy.tag == "EnemyMelee")
+                    enemy.GetComponent<AIMeele>().TakeDamage(damage);
                 Debug.Log(enemy);
-                enemy.GetComponent<Enemy>().TakeDamage(damage);
+
+<<<<<<< Updated upstream
+        }
+=======
+            }
+        }
+    }
+   
+    public void interaction()
+    {
+        Debug.Log("ÄÀ");
+        Collider2D[] Objects = Physics2D.OverlapCircleAll(attack_Point.position, attack_range, ChestLayers);
+            foreach (Collider2D chest in Objects)
+            {
+                Debug.Log(chest);
+                chest.GetComponent<Chest>().TakeDamage(damage);
+                
             }
 
-        }
+>>>>>>> Stashed changes
     }
    
     void OnDrawGizmosSelected(){

@@ -42,6 +42,49 @@ Tilemap:
   m_GameObject: {fileID: 963169604239897417}
   m_Enabled: 1
   m_Tiles:
+<<<<<<< Updated upstream
+=======
+  - first: {x: 3, y: -10, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 22
+      m_TileSpriteIndex: 22
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 0, y: -9, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 19
+      m_TileSpriteIndex: 19
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 3, y: -9, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 20
+      m_TileSpriteIndex: 20
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 4, y: -9, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+>>>>>>> Stashed changes
   - first: {x: -1, y: -7, z: 0}
     second:
       serializedVersion: 2
@@ -272,6 +315,17 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 2dec78caea1bde142a1c8acd1ba5710f, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: e325d081b25a0fc4083f1c85ab4eaa3d, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 46b12dfabb169b14e94244c48a29611f, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 851f7a5471cf97646a0a19d7fa4c2e68, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: f670de31090c0174b9eff6b3b213a0c9, type: 2}
+>>>>>>> Stashed changes
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 68337c6b4e4c4d84aa1c71d18928c48e, type: 3}
@@ -311,8 +365,21 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 59e5bb1881ff7d3498bbbf725196ae31, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 0}
+<<<<<<< Updated upstream
   m_TileMatrixArray:
   - m_RefCount: 19
+=======
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 66ad2f20fb458ba499d34a401a7efcb4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: dffd0fafc34c01c40a3e371a2994f85b, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 5aed81dee41d3484fb7d62d7867393de, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 93aea35495c4dbb458c1fe4877395efd, type: 3}
+  m_TileMatrixArray:
+  - m_RefCount: 23
+>>>>>>> Stashed changes
     m_Data:
       e00: 1
       e01: 0
@@ -331,6 +398,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
+<<<<<<< Updated upstream
   - m_RefCount: 18
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 1
@@ -340,6 +408,17 @@ Tilemap:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -1, y: -7, z: 0}
   m_Size: {x: 10, y: 8, z: 1}
+=======
+  - m_RefCount: 22
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
+  - m_RefCount: 1
+    m_Data: {r: 0.94120467, g: 0.56462413, b: 0.6470304, a: 1}
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: -1, y: -10, z: 0}
+  m_Size: {x: 10, y: 11, z: 1}
+>>>>>>> Stashed changes
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -401,7 +480,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.78, y: 0.78, z: 0}
+  m_ChunkCullingBounds: {x: 2.06, y: 2.06, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -449,11 +528,15 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8378727913399065440}
   m_Enabled: 1
-  m_CellSize: {x: 2.56, y: 2.56, z: 0}
+  m_CellSize: {x: 5.12, y: 5.12, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+<<<<<<< Updated upstream
 --- !u!114 &703024413560832604
+=======
+--- !u!114 &4753467716851276238
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
